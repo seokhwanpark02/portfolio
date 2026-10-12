@@ -7,7 +7,7 @@
 |---|---|---|
 | **Software** | 카메라·LiDAR 융합 자율주행 시스템, 특징점 기반 파노라마 스티칭 | [SW 포트폴리오 보기](https://github.com/seokhwanpark02/software_portfolio) |
 | **Embedded** | STM32 3-MCU 센서·구동 분산 제어, Zynq 엣지 AI 영상 분류 | [Embedded 포트폴리오 보기](https://github.com/seokhwanpark02/Embedded_Portfolio) |
-| **Hardware** | AXI4 DMA·CDC, 3×3 멀티코어 이미지 필터 RTL, Zynq PS–PL GEMM 통합 | [HW 포트폴리오 보기](https://github.com/seokhwanpark02/Hardware-portfolio) |
+| **Hardware** | AXI4 메모리 읽기 DMA·비동기 CDC, 9코어 병렬 이미지 필터 RTL, PYNQ 기반 LLM 가속 NPU 설계 | [HW 포트폴리오 보기](https://github.com/seokhwanpark02/Hardware-portfolio) |
 
 ## Software Projects
 
@@ -27,14 +27,14 @@
 
 | 프로젝트 | 다룬 내용 | 주요 기술 | 상세 내용 |
 |---|---|---|---|
-| **AXI4 DMA·CDC 데이터 전송 엔진** | AXI4-Lite·AXI4 Read·AXI4-Stream 인터페이스, 클록 도메인 간 데이터 전달, 회귀 검증 및 타이밍 분석 | SystemVerilog · SVA · cocotb · Vivado | [프로젝트 보기](https://github.com/seokhwanpark02/Hardware-portfolio/tree/main/axi_dma_cdc) |
-| **3×3 멀티코어 이미지 필터 RTL** | 9개 프로세서의 이미지 필터 처리, barrier 동기화, 레퍼런스 기반 출력 대조 및 검증 | SystemVerilog · SVA · C++ · Verilator | [프로젝트 보기](https://github.com/seokhwanpark02/Hardware-portfolio/tree/main/multicore_rtl) |
-| **Zynq PS–PL INT16 GEMM 통합** | PS의 PL 가속기 제어, INT16 GEMM 연산 연동, CPU 레퍼런스와 결과 비교 | Python · Zynq · AXI/DMA | [프로젝트 보기](https://github.com/seokhwanpark02/Hardware-portfolio/tree/main/zynq_ps_pl_gemm) |
+| **AXI4 메모리 읽기 DMA 및 비동기 CDC 설계** | AXI4 Read·AXI4-Stream 데이터 전송, 비동기 클록 연결, 회귀 검증 및 타이밍 개선 | SystemVerilog · CDC · SVA · cocotb · Vivado | [프로젝트 보기](https://github.com/seokhwanpark02/Hardware-portfolio/tree/main/axi_dma_cdc) |
+| **9코어 병렬 이미지 필터 RTL 설계** | 3×3 코어의 픽셀 교환과 barrier 동기화, 출력·coverage 검증 및 배선 최적화 | SystemVerilog · SVA · C++ · Verilator · Vivado | [프로젝트 보기](https://github.com/seokhwanpark02/Hardware-portfolio/tree/main/multicore_rtl) |
+| **PYNQ 기반 LLM 가속 NPU 설계** | 8×8 INT16 GEMM의 PS–PL 통합, CPU reference 정합성 검증, PE 활용률 분석 및 가중치 선적재 개선 | PYNQ · Python · AXI DMA · cocotb · Verilator · Vivado | [프로젝트 보기](https://github.com/seokhwanpark02/Hardware-portfolio/tree/main/pynq_llm_npu) |
 
 ## 프로젝트에서 다룬 역량
 
 - **영상·센서 처리:** 카메라 좌표 변환, 센서 입력 전처리 및 시간 동기화, 영상 합성
 - **실시간 처리와 디버깅:** 최신 프레임 우선 처리, 추론 최적화, 기록 데이터 재생 및 전류 계측
 - **임베디드 제어:** MCU 센서 입력·PWM 구동, SPI 통신, RTOS Task, 인터럽트·DMA 활용
-- **하드웨어 설계와 통합:** RTL, AXI 인터페이스, CDC, 멀티코어 동기화, PS–PL 연동
+- **하드웨어 설계와 통합:** RTL, AXI 인터페이스, CDC, 멀티코어 동기화, INT16 GEMM 가속 및 PS–PL 통합
 - **검증:** 단위 테스트, 레퍼런스 기반 결과 대조, SVA·fault injection, 회귀 검증 및 타이밍 분석

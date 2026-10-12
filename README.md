@@ -1,6 +1,6 @@
-# 박석환 | Software · Embedded · Hardware Portfolio
+# 박석환 | Hardware · Software · Embedded Portfolio
 
-영상처리·센서 데이터 처리, MCU·RTOS 기반 제어, FPGA·SoC 설계 및 검증 프로젝트를 정리한 포트폴리오입니다.
+FPGA·SoC 설계 및 검증, 자율주행, 영상처리·센서 데이터 처리, MCU·RTOS 기반 제어 프로젝트를 정리한 포트폴리오입니다.
 프로젝트별 구현 내용, 코드, 검증 결과는 아래 링크에서 확인할 수 있습니다.
 
 | 분야 | 프로젝트 | 저장소 |
